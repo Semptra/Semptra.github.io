@@ -1,1 +1,213 @@
-<p>Hello!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="index.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+</head>
+<body>
+
+<div class="w3-content content">
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px; background: rgb(10, 10, 10, 0.9)" id="band">
+    <button onclick="randomHero()">Random</button>
+    <p id="random-hero" style="color: white">Your random hero will appear here</p>
+  </div>
+</div>
+<script>
+    function randomHero()
+    {
+        var heroes = [
+            "Accursed",
+            "Adrenaline",
+            "Aluna",
+            "Amun-Ra",
+            "Andromeda",
+            "Apex",
+            "Arachna",
+            "Armadon",
+            "Artesia",
+            "Artillery",
+            "Balphagore",
+            "Behemoth",
+            "Berzerker",
+            "Blacksmith",
+            "Blitz",
+            "Blood Hunter",
+            "Bombardier",
+            "Bramble",
+            "Bubbles",
+            "Bushwack",
+            "Calamity",
+            "Chi",
+            "Chronos",
+            "Circe",
+            "Corrupted Disciple",
+            "Cthulhuphant",
+            "Dampeer",
+            "Deadlift",
+            "Deadwood",
+            "Defiler",
+            "Demented Shaman",
+            "Devourer",
+            "Doctor Repulsor",
+            "Draconis",
+            "Drunken Master",
+            "Electrician",
+            "Ellonia",
+            "Emerald Warden",
+            "Empath",
+            "Engineer",
+            "Fayde",
+            "Flint Beastwood",
+            "Flux",
+            "Forsaken Archer",
+            "Gauntlet",
+            "Gemini",
+            "Geomancer",
+            "Glacius",
+            "Goldenveil",
+            "Gravekeeper",
+            "Grinex",
+            "Gunblade",
+            "Hammerstorm",
+            "Hellbringer",
+            "Ichor",
+            "Jeraziah",
+            "Kane",
+            "Keeper of the Forest",
+            "Kinesis",
+            "King Klout",
+            "Klanx",
+            "Kraken",
+            "Legionnaire",
+            "Lodestone",
+            "Lord Salforis",
+            "Magebane",
+            "Magmus",
+            "Maliken",
+            "Martyr",
+            "Master Of Arms",
+            "Midas",
+            "Mimix",
+            "Moira",
+            "Monarch",
+            "Monkey King",
+            "Moon Queen",
+            "Moraxus",
+            "Myrmidon",
+            "Night Hound",
+            "Nitro",
+            "Nomad",
+            "Nymphora",
+            "Oogie",
+            "Ophelia",
+            "Pandamonium",
+            "Parallax",
+            "Parasite",
+            "Pearl",
+            "Pebbles",
+            "Pestilence",
+            "Pharaoh",
+            "Plague Rider",
+            "Pollywog Priest",
+            "Predator",
+            "Prisoner 945",
+            "Prophet",
+            "Puppet Master",
+            "Pyromancer",
+            "Rally",
+            "Rampage",
+            "Ravenor",
+            "Revenant",
+            "Rhapsody",
+            "Riftwalker",
+            "Riptide",
+            "Salomon",
+            "Sand Wraith",
+            "Sapphire",
+            "Scout",
+            "Shadowblade",
+            "Shellshock",
+            "Silhouette",
+            "Sir Benzington",
+            "Skrap",
+            "Slither",
+            "Solstice",
+            "Soul Reaper",
+            "Soulstealer",
+            "Succubus",
+            "Swiftblade",
+            "Tarot",
+            "Tempest",
+            "The Chipper",
+            "The Dark Lady",
+            "The Gladiator",
+            "The Madman",
+            "Thunderbringer",
+            "Torturer",
+            "Tremble",
+            "Tundra",
+            "Valkyrie",
+            "Vindicator",
+            "Voodoo Jester",
+            "War Beast",
+            "Warchief",
+            "Wildsoul",
+            "Witch Slayer",
+            "Wretched Hag",
+            "Zephyr",
+        ];
+
+        var randomIndex = Math.floor(Math.random() * heroes.length);
+        var randomHero = heroes[randomIndex];
+
+        document.getElementById("random-hero").innerHTML = randomHero;
+    }
+</script>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+body {
+    background-image: url('./background.jpg');
+}
+
+.content {
+    max-width:2000px;
+    margin-top:46px;
+}
